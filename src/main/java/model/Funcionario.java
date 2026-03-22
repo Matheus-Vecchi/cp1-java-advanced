@@ -3,9 +3,9 @@ package model;
 public class Funcionario {
     private String nome;
     private int horasTrabalhadas;
-    private float valorHora;
+    private double valorHora;
 
-    public Funcionario(String nome, int horasTrabalhadas, float valorHora) {
+    public Funcionario(String nome, int horasTrabalhadas, double valorHora) {
         this.nome = nome;
         this.horasTrabalhadas = horasTrabalhadas;
         this.valorHora = valorHora;
@@ -19,11 +19,11 @@ public class Funcionario {
         return horasTrabalhadas;
     }
 
-    public float getValorHora() {
+    public double getValorHora() {
         return valorHora;
     }
 
-    public float calcularSalario() {
+    public double calcularSalario() {
         return horasTrabalhadas * valorHora;
     }
 

@@ -2,17 +2,17 @@ package model;
 
 public class FuncionarioSenior extends Funcionario {
     private static final int HORAS_BONUS = 15;
-    private float valorBonus;
+    private double valorBonus;
 
-    public FuncionarioSenior(String nome, int horasTrabalhadas, float valorHora, float valorBonus) {
+    public FuncionarioSenior(String nome, int horasTrabalhadas, double valorHora, double valorBonus) {
         super(nome, horasTrabalhadas, valorHora);
         this.valorBonus = valorBonus;
     }
 
     @Override
-    public float calcularSalario() {
+    public double calcularSalario() {
         int qtdBonus = getHorasTrabalhadas() / HORAS_BONUS;
-        float totalBonus = qtdBonus * valorBonus;
+        double totalBonus = qtdBonus * valorBonus;
 
         return super.calcularSalario() + totalBonus;
     }

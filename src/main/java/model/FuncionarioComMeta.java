@@ -2,16 +2,16 @@ package model;
 
 public class FuncionarioComMeta extends Funcionario {
     private int horasMinimasParaBonus;
-    private float valorMeta;
+    private double valorMeta;
 
-    public FuncionarioComMeta(String nome, int horasTrabalhadas, float valorHora, int minHoras, int valorMeta) {
+    public FuncionarioComMeta(String nome, int horasTrabalhadas, double valorHora, int minHoras, int valorMeta) {
         super(nome, horasTrabalhadas, valorHora);
         this.horasMinimasParaBonus = minHoras;
         this.valorMeta = valorMeta;
     }
 
     @Override
-    public float calcularSalario() {
+    public double calcularSalario() {
         if (getHorasTrabalhadas() >= horasMinimasParaBonus) {
             return super.calcularSalario() + valorMeta;
         } else {
