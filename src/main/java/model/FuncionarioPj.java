@@ -25,6 +25,7 @@ public class FuncionarioPj extends Funcionario {
 
     @Override
     public void imprimirInformacao() {
+        System.out.println("Cargo: PJ");
         super.imprimirInformacao();
         System.out.println("Horas acordadas no contrato: " + horasAcordadas);
     }

@@ -19,6 +19,7 @@ public class FuncionarioSenior extends Funcionario {
 
     @Override
     public void imprimirInformacao() {
+        System.out.println("Cargo: Senior");
         super.imprimirInformacao();
         System.out.println("Valor do bônus: R$" + valorBonus);
     }

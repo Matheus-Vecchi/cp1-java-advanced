@@ -4,9 +4,9 @@ public class FuncionarioComMeta extends Funcionario {
     private int horasMinimasParaBonus;
     private double valorMeta;
 
-    public FuncionarioComMeta(String nome, int horasTrabalhadas, double valorHora, int minHoras, int valorMeta) {
+    public FuncionarioComMeta(String nome, int horasTrabalhadas, double valorHora, int horasMinimasParaBonus, double valorMeta) {
         super(nome, horasTrabalhadas, valorHora);
-        this.horasMinimasParaBonus = minHoras;
+        this.horasMinimasParaBonus = horasMinimasParaBonus;
         this.valorMeta = valorMeta;
     }
 
@@ -21,6 +21,7 @@ public class FuncionarioComMeta extends Funcionario {
 
     @Override
     public void imprimirInformacao() {
+        System.out.println("Cargo: Funcionário com meta");
         super.imprimirInformacao();
         System.out.println("Valor da meta R$" + valorMeta);
     }
